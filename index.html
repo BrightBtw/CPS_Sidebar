@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./styles.css">
+    <title>CPS</title>
+</head>
+
+<body>
+    <aside class="sidebar">
+
+        <nav class="sidebar__menu">
+            <div class="sidebar__item">
+                <button class="sidebar__button sidebar__button-burger">
+                    <img class="sidebar__icon" src="./image/ic/burger_exit.svg" alt="exit button">
+                </button>
+            </div>
+
+            <div class="sidebar__item sidebar__item-logo">
+                <img class="sidebar__logo" src="./image/ic/Group.svg" alt="CPS Logo">
+            </div>
+
+            <div class="sidebar__item">
+                <button class="sidebar__button sidebar__button-search">
+                    <img class="sidebar__icon" src="./image/ic/search.svg" alt="search button">
+                </button>
+            </div>
+        </nav>
+
+        <div class="sidebar__tabs">
+            <input class="sidebar__tab-input" type="radio" id="tab_nav1" name="tab-nav" checked>
+            <label class="sidebar__tab-label" for="tab_nav1">Ремонт техники</label>
+
+            <input class="sidebar__tab-input" type="radio" id="tab_nav2" name="tab-nav">
+            <label class="sidebar__tab-label" for="tab_nav2">Услуги и сервисы</label>
+
+            <input class="sidebar__tab-input" type="radio" id="tab_nav3" name="tab-nav">
+            <label class="sidebar__tab-label" for="tab_nav3">Корпоративным клиентам</label>
+
+            <input class="sidebar__tab-input" type="radio" id="tab_nav4" name="tab-nav">
+            <label class="sidebar__tab-label" for="tab_nav4">Продавцам техники</label>
+
+            <input class="sidebar__tab-input" type="radio" id="tab_nav5" name="tab-nav">
+            <label class="sidebar__tab-label" for="tab_nav5">Партнерам</label>
+
+            <input class="sidebar__tab-input" type="radio" id="tab_nav6" name="tab-nav">
+            <label class="sidebar__tab-label" for="tab_nav6">Производителям</label>
+
+            <input class="sidebar__tab-input" type="radio" id="tab_nav7" name="tab-nav">
+            <label class="sidebar__tab-label" for="tab_nav7">Наши сервисные центры</label>
+
+            <input class="sidebar__tab-input" type="radio" id="tab_nav8" name="tab-nav">
+            <label class="sidebar__tab-label" for="tab_nav8">Контакты</label>
+        </div>
+
+        <div class="sidebar__contacts contacts">
+
+            <div class="contacts__actions">
+                <button class="contacts__button contacts__button--call">
+                    <img class="contacts__icon" src="./image/ic/call.svg" alt="call button">
+                </button>
+
+                <button class="contacts__button contacts__button--chat">
+                    <img class="contacts__icon" src="./image/ic/chat.svg" alt="chat button">
+                </button>
+
+                <button class="contacts__button contacts__button--profile">
+                    <img class="contacts__icon" src="./image/ic/profile.svg" alt="profile button">
+                </button>
+            </div>
+
+            <p class="contacts__email">mail@cps.com</p>
+            <p class="contacts__phone">8 800 890 8900</p>
+
+            <div class="contacts__lang lang">
+                <input class="lang__input" type="radio" id="lang_ru" name="lang" checked>
+                <label class="lang__label" for="lang_ru">RU</label>
+
+                <input class="lang__input" type="radio" id="lang_en" name="lang">
+                <label class="lang__label" for="lang_en">EN</label>
+
+                <input class="lang__input" type="radio" id="lang_ch" name="lang">
+                <label class="lang__label" for="lang_ch">CH</label>
+            </div>
+
+        </div>
+    </aside>
+</body>
+
+</html>

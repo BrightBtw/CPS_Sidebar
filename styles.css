@@ -1,0 +1,493 @@
+/* Сброс базовых стилей */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+@font-face {
+    font-family: 'TT Lakes Bold';
+    src: url('./fonts/TTLakes-Bold.eot');
+    src: url('./fonts/TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/TTLakes-Bold.woff') format('woff'),
+        url('./fonts/TTLakes-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes Medium';
+    src: url('./fonts/TTLakes-Medium.eot');
+    src: url('./fonts/TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/TTLakes-Medium.woff') format('woff'),
+        url('./fonts/TTLakes-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes Regular';
+    src: url('./fonts/TTLakes-Regular.eot');
+    src: url('./fonts/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/TTLakes-Regular.woff') format('woff'),
+        url('./fonts/TTLakes-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+body {
+    background-color: #F8F8F8;
+    font-family: 'TT Lakes Regular', sans-serif;
+}
+
+h1 {
+    font-family: 'TT Lakes Bold', sans-serif;
+    color: rgba(27, 28, 33, 1);
+    padding: 0;
+    margin: 0;
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+    letter-spacing: -0.375px;
+    margin-left: 0.75rem;
+}
+
+p {
+    font-size: 0.875rem;
+}
+
+ul,
+li {
+    list-style: none;
+
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+br {
+    display: none;
+}
+
+/* Основа для мобильных */
+
+/* Навигация */
+.menu__nav {
+    display: flex;
+    /* width: auto; */
+    min-height: 87px;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    align-items: center;
+    border-bottom: 1px solid rgba(217, 255, 245, 1);
+    margin-bottom: 1.5rem;
+}
+
+/* Кнопки в навигации */
+
+.menu__nav--button {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 1.5rem 0.5rem;
+}
+
+/* Скрытие текста кнопок навигации */
+
+.menu__nav--button--text {
+    display: none;
+    font-family: 'TT Lakes Medium', sans-serif;
+    color: rgba(27, 28, 33, 1)
+}
+
+/* Лого в навгиациичы */
+.menu__logo--wrapper {
+    margin: 0 5px 0 1px;
+}
+
+/* Разделитель в навигации */
+.nav__divider {
+    width: 2px;
+    height: 2rem;
+    background-color: #E0E0E0;
+    border-radius: 1px;
+    margin: 0 0.75rem;
+}
+
+/* Списки меню */
+.menu__nav--list1,
+.menu__nav--list2 {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+/* Выравнивание элементов в навигации */
+.header__left,
+.header__right,
+.header__center {
+    display: flex;
+    align-items: center;
+    padding: 0 0.5rem;
+}
+
+/* Центральная часть навигации на мобильных скрыта */
+.header__center {
+    display: none;
+}
+
+/* Выравнивание title */
+.main__title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+/* highlight */
+
+.main__divider {
+    width: 0.25rem;
+    height: 2.5rem;
+    background-color: rgba(65, 246, 215, 1);
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+
+
+.tabs {
+    display: flex;
+}
+
+/* Меню по разделам */
+.tabs__group {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    overflow-x: auto;
+    /* Скрываем скроллбар */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    padding: 0 1rem 1.5rem;
+}
+
+/* Кнопки меню по разделам  */
+.tabs__label {
+    font-family: 'TT Lakes Medium', sans-serif;
+    color: rgba(126, 126, 130, 1);
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem 1rem;
+    height: 2.5rem;
+    cursor: pointer;
+    flex-shrink: 0;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    background-color: transparent;
+    letter-spacing: -0.02px;
+}
+
+/* Скрытие радио-кнопок */
+.tabs__input {
+    display: none;
+}
+
+/* Стили для активной вкладки */
+input[type="radio"]:checked+.tabs__label {
+    border-radius: 6px;
+    border: 2px solid rgba(184, 255, 236, 1);
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/* Скрытие второго абзаца в мобильной версии */
+.main__text--second {
+    display: none;
+}
+
+
+/* Стили для кнопки "Показать все" */
+.main__expand--button {
+    font-family: 'TT Lakes Medium', sans-serif;
+    display: flex;
+    align-items: center;
+    height: 1.5rem;
+    margin: 1rem 0;
+    color: rgba(27, 28, 33, 1);
+    line-height: 1.5rem;
+    letter-spacing: -0.02px;
+}
+
+/* Стили для текста в основной части */
+.main__paragraphs {
+    width: auto;
+    padding: 0 1rem;
+    color: rgba(27, 28, 33, 1);
+    line-height: 1.125rem;
+    letter-spacing: 0.02px;
+}
+
+
+/* Стили для изображения в основной части */
+.main__image {
+    width: 100%;
+    /* Контейнер на всю ширину */
+    text-align: center;
+    /* Центрируем картинку */
+}
+
+
+.nav__divider--left {
+    display: none;
+}
+
+.main__nav--button {
+    display: none;
+}
+
+@media (min-width: 321px) and (max-width: 768px) {
+    br {
+        display: inline;
+    }
+
+    .menu__nav {
+        overflow-x: auto;
+        /* Скрываем скроллбар */
+        scrollbar-width: none;
+        /* Firefox */
+        -ms-overflow-style: none;
+    }
+
+    .header__center {
+        display: flex;
+        margin-left: auto;
+        padding: 0;
+        margin-right: -0.5rem;
+    }
+
+    h1 {
+        margin-left: 1.25rem;
+    }
+
+    .main__text--second {
+        display: inline;
+    }
+
+    .main__highlight {
+        display: none;
+    }
+
+    .main__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 2.5rem;
+        padding: 0 2.125rem;
+    }
+
+    .main__paragraphs {
+        padding: 0;
+        line-height: 1.25rem;
+        margin-right: 2rem;
+    }
+
+    .nav__divider--left {
+        display: flex;
+    }
+}
+
+
+@media (min-width: 769px) {
+    br {
+        display: inline;
+    }
+
+    .main__text--second {
+        display: inline;
+        margin-top: 1rem;
+    }
+
+    .main__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 2rem;
+    }
+
+    h1 {
+        margin-left: 1.875rem;
+    }
+
+    .main__list--button {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .main__nav--button {
+        display: flex;
+        align-items: center;
+    }
+
+    .main__nav--button--text {
+        margin: 0.5rem 0.5rem 0.5rem 0;
+    }
+
+    .main__title {
+        margin-top: 2.625rem;
+    }
+
+    .main__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0 2.125rem;
+    }
+
+    .main__paragraphs {
+        line-height: 1.25rem;
+        padding-left: 0;
+        margin-right: 1.25rem;
+    }
+
+    .tabs__group {
+        padding: 0 2.125rem 2rem;
+        display: grid;
+        grid-template-columns: repeat(6, auto);
+        white-space: nowrap;
+    }
+
+    .tabs__label:last-of-type {
+        grid-column: 1 / -1;
+        justify-self: start;
+    }
+
+    /* скрытие навигации */
+    .nav__divider {
+        display: none;
+    }
+
+    .menu__nav {
+        display: none;
+    }
+}
+
+
+/* =============== Сайдбар ================== */
+
+
+.sidebar {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    border-color: #F8F8F8;
+    width: 20rem;
+    box-shadow: 10px -30px 30px 30px rgba(0, 0, 0, 0.2);
+    color: rgba(27, 28, 33, 1);
+}
+
+
+/* Навигация сайдбара */
+.sidebar__menu {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+/* Кнопки сайдбара */
+.sidebar__button,
+.contacts__button {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.contacts__actions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.sidebar__item-logo {
+    margin-right: 3rem;
+}
+
+.sidebar__contacts {
+    padding: 1.5rem;
+}
+
+input[type="radio"]:checked+.lang__label {
+    opacity: 0.6;
+}
+
+.contacts__email {
+    font-family: 'TT Lakes Medium', sans-serif;
+    margin: 1rem 0;
+    font-size: 1rem;
+    letter-spacing: -0.2px;
+}
+
+.contacts__phone {
+    font-family: 'TT Lakes Bold', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+    height: 2rem;
+    letter-spacing: -0.6px;
+}
+
+.sidebar__tabs {
+    /* display: flex;
+    flex-direction: column; */
+    overflow-y: auto;
+    /* Скрываем скроллбар */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+}
+
+/* Кнопки меню навигации слайдера  */
+.sidebar__tab-label {
+    font-family: 'TT Lakes Medium', sans-serif;
+    color: rgba(27, 28, 33, 1);
+    display: flex;
+    flex-direction: row;
+    padding: 0.25rem 1.25rem;
+    cursor: pointer;
+    flex-shrink: 0;
+    border-left: 0.25rem solid transparent;
+    /* border-radius: 6px; */
+    background-color: transparent;
+    letter-spacing: -0.2px;
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Скрытие радио-кнопок */
+.lang__input,
+.sidebar__tab-input {
+    display: none;
+}
+
+.lang__label {
+    font-family: 'TT Lakes Medium', sans-serif;
+    font-size: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0.375rem;
+    letter-spacing: -0.2px;
+}
+
+/* Стили для активной вкладки */
+input[type="radio"]:checked+.sidebar__tab-label {
+    opacity: 0.6;
+    border-left: 0.25rem solid rgba(65, 246, 215, 1);
+
+}
